@@ -11,11 +11,14 @@ function App() {
        <UserCard/> 
       </div>
       <div className='Card'>
-       <UserCard2/> 
-      </div>  
+       <UserCard/> 
+      </div>
       <div className='Card'>
-       <UserCard3/> 
-      </div>  
+       <UserCard/> 
+      </div>
+      <div className='Card'>
+       <UserCard/> 
+      </div>
     </div>
   );
 }
