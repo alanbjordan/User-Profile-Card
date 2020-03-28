@@ -14,15 +14,6 @@ function App() {
       <div className='Card'>
        <UserCard/> 
       </div>
-      <div className='Card'>
-       <UserCard/> 
-      </div>
-      <div className='Card'>
-       <UserCard/> 
-      </div>
-      <div className='Card'>
-       <UserCard/> 
-      </div>
     </div>
   );
 }
