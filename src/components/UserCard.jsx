@@ -27,7 +27,7 @@ class UserCard extends Component {
     return (
       <div>
         <img src={stateValues[3]}/>
-        <p> {stateValues[0]}. {stateValues[2]} {stateValues[1]}</p>
+        <p> {stateValues[0]}. {stateValues[1]} {stateValues[2]}</p>
         <p>{stateValues[4]}</p>  
         <p>{stateValues[5]}</p>
         <p>{stateValues[6]}</p>
