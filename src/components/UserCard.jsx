@@ -2,23 +2,18 @@ import React, { Component } from "react";
 
 class UserCard extends Component {
   state = {
-    title: "Title",
-    f_Name: "First Name",
-    l_Name: "Last Name",
-    pic: "pic",
-    email: "email",
-    phone: "phone"
+
   };
   async componentDidMount() {
     try {
       const response = await fetch(`https://randomuser.me/api/?results=1`);
       const data = await response.json();
-      console.log(data.results[0].name.title);
+      // console.log(data.results[0]);
       this.setState({
         title: data.results[0].name.title,
-        f_Name: data.results[0].name.first,
-        l_Name: data.results[0].name.last,
-        pic: data.results[0].picture.large,
+        firstName: data.results[0].name.first,
+        lastName: data.results[0].name.last,
+        picture: data.results[0].picture.large,
         email: data.results[0].email,
         phone: data.results[0].phone
       });
@@ -27,21 +22,16 @@ class UserCard extends Component {
       return error;
     }
   }
+  
   render() {
-    const { title } = this.state;
-    const { f_Name } = this.state;
-    const { l_Name } = this.state;
-    const { pic } = this.state;
-    const { email } = this.state;
-    const { phone } = this.state;
+    const stateValues = Object.values(this.state);
     return (
       <div>
-        <div>
-          <img src={pic} alt="pic"></img>
-          <p>{title} {f_Name} {l_Name} </p>
-          <p>E|{email}</p>
-          <p>P|{phone}</p>
-        </div>
+        <img src={stateValues[3]}/>
+        <p> {stateValues[0]}. {stateValues[2]} {stateValues[1]}</p>
+        <p>{stateValues[4]}</p>  
+        <p>{stateValues[5]}</p>
+        <p>{stateValues[6]}</p>
       </div>
     );
   }
